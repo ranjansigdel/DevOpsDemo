@@ -27,14 +27,14 @@ pipeline
 		{
 			steps
 			{
-				bat 'mvn clean'
+				sh 'mvn clean'
 			}			
 		}
 		stage('Test Stage')
 		{
 			steps
 			{
-				bat 'mvn test'
+				sh 'mvn test'
 			}			
 		}
 		stage('Pre-Build Stage')
@@ -48,7 +48,7 @@ pipeline
 		{
 			steps
 			{
-				bat 'mvn install'
+				sh 'mvn install'
 			}			
 		}
 		stage('Post-Build Stage')
@@ -62,7 +62,7 @@ pipeline
 		{
 			steps
 			{
-				bat 'java --version'
+				sh 'java --version'
 			}			
 		}
 		
